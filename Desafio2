@@ -13,7 +13,6 @@ class ProductManager{
     getProducts = async () => {
         if (fs.existsSync(path)) {
             const data = await fs.promises.readFile(path, 'utf-8');
-/*             console.log(data); */
             const products = JSON.parse(data);
             return products;
         }
@@ -52,7 +51,7 @@ class ProductManager{
         if(productos[id-1]){
         return console.log(productos[id-1])  
         }else{
-            console.log('not found')
+            console.log('no encontrado')
         }
     }
     deleteById = async (id) =>{
@@ -66,20 +65,18 @@ class ProductManager{
                 console.log(error)
             }
         }else{
-            console.log('not Found')
+            console.log('no encontrado')
         }
     }
 
 }
 let instancia = new ProductManager()
-/* instancia.getProductsById(2)
- */   /* instancia.deleteById(2)  */ 
    instancia.addProducts({
-    "title": "bananafdsa",
-    "description": "es literalmente una bananafdsa",
-    "price": "yo no tengo preio, bitch x2fdsa",
-    "thumbnail": "reultrasecretofads",
-    "code": "123abdefgh",
-    "stock": 122,
+    "title": "papas",
+    "description": "son papas y sirven para comer",
+    "price": "300",
+    "thumbnail": "thumbsnail 1",
+    "code": "codigo 1",
+    "stock": 123,
     
 }) 
